@@ -2,7 +2,7 @@
 
 **Puente entre la academia y la industria tecnológica.**
 
-Bifröst Learning Path es un programa de orientación académica diseñado para estudiantes de informática que busca reducir el desenfoque en el aprendizaje mediante una ruta formativa clara y estructurada.
+Bifröst Learning Path es un programa de orientación académica diseñado para estudiantes de informática — tanto universitarios como de formación técnico-profesional (TP) — que busca reducir el desenfoque en el aprendizaje mediante una ruta formativa clara y estructurada.
 
 ## Motivación
 
