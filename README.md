@@ -26,6 +26,41 @@ Bifröst conecta los contenidos de cada asignatura con las competencias profesio
 - Disminuir la deserción universitaria.
 - Facilitar la transición desde la formación académica hacia el mundo laboral.
 
+## Stack tecnológico
+
+| Capa | Tecnología |
+|------|-----------|
+| Web | Next.js + Tailwind CSS |
+| Backend | Python (FastAPI) |
+| Mobile | Flutter + Dart (Android Studio) |
+| Base de datos | PostgreSQL |
+| Cache | Redis |
+
+## Estructura del proyecto
+
+```
+bifrost-turing-path/
+├── web/                    # Next.js + Tailwind
+│   ├── app/
+│   ├── components/
+│   ├── tailwind.config.ts
+│   └── package.json
+├── backend/                # Python (FastAPI)
+│   ├── api/
+│   ├── core/
+│   ├── models/
+│   ├── services/
+│   ├── requirements.txt
+│   └── main.py
+├── mobile/                 # Flutter + Dart
+│   ├── lib/
+│   ├── android/
+│   ├── ios/
+│   └── pubspec.yaml
+├── docker-compose.yml      # PostgreSQL + Redis
+└── README.md
+```
+
 ## Licencia
 
 MIT
