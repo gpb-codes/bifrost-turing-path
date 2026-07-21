@@ -36,28 +36,31 @@ Bifröst conecta los contenidos de cada asignatura con las competencias profesio
 | Base de datos | PostgreSQL |
 | Cache | Redis |
 
-## Estructura del proyecto
+## Estructura del proyecto (Clean Architecture)
 
 ```
 bifrost-turing-path/
-├── web/                    # Next.js + Tailwind
-│   ├── app/
-│   ├── components/
-│   ├── tailwind.config.ts
-│   └── package.json
-├── backend/                # Python (FastAPI)
-│   ├── api/
-│   ├── core/
-│   ├── models/
-│   ├── services/
-│   ├── requirements.txt
+├── backend/                    # Python (FastAPI)
+│   ├── domain/                 # Entidades, value objects, interfaces de repositorio
+│   ├── application/            # Casos de uso, DTOs, puertos
+│   ├── infrastructure/         # Implementaciones concretas (DB, Redis, APIs externas)
+│   ├── presentation/           # Controladores/rutas de la API
 │   └── main.py
-├── mobile/                 # Flutter + Dart
+├── web/                        # Next.js + Tailwind
+│   ├── domain/                 # Modelos, interfaces
+│   ├── application/            # Hooks, servicios de estado
+│   ├── infrastructure/         # Cliente API, repositorios
+│   ├── presentation/           # Componentes, páginas
+│   └── package.json
+├── mobile/                     # Flutter + Dart
 │   ├── lib/
+│   │   ├── domain/             # Entidades, interfaces de repositorio
+│   │   ├── data/               # Implementaciones de repositorio, fuentes de datos
+│   │   └── presentation/       # Bloc/Cubit, screens, widgets
 │   ├── android/
 │   ├── ios/
 │   └── pubspec.yaml
-├── docker-compose.yml      # PostgreSQL + Redis
+├── docker-compose.yml          # PostgreSQL + Redis
 └── README.md
 ```
 
